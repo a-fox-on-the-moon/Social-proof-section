@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+.desktop-background {
+  position: fixed;
+  z-index: -1;
+  display: flex;
+  height: 100vh;
+}
+
+.desktop-background img {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-background {
+  display: none;
+}
+
+.main-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 70px 70px 30px;
+}
+
+.top-left h1 {
+  font-size: 2.8rem;
+  color: rgb(80, 31, 80);
+  width: 70%;
+  margin: 0;
+}
+
+.top-left p {
+  color: rgb(147, 123, 145);
+  line-height: 1.3rem;
+  margin: 25px 0;
+  width: 75%;
+}
+
+.top-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews,
+.report-guru,
+.best-tech {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  justify-items: start;
+  background: rgb(247, 242, 247);
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgb(80, 31, 80);
+  width: 70%;
+  padding: 3px 0;
+  margin-bottom: 15px;
+}
+
+.reviews {
+  margin-top: 30px;
+}
+
+.report-guru {
+  margin-left: 30px;
+}
+
+.best-tech {
+  margin-left: 60px;
+}
+
+.stars {
+  margin: 0 auto;
+}
+
+.star {
+  content: url("./images/icon-star.svg");
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
+.main-bottom {
+  display: flex;
+  padding: 0 70px;
+}
+
+.buyer-1,
+.buyer-2,
+.buyer-3 {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 10% 10% 70%;
+  color: rgb(255, 255, 255);
+  background: rgb(80, 31, 80);
+  border-radius: 5px;
+  padding: 20px 20px 0;
+  margin: 10px;
+}
+
+.main-bottom img {
+  grid-area: 1 / 1 / 3 / 2;
+  align-self: center;
+  border-radius: 100px;
+  width: 35px;
+  height: 35px;
+}
+
+.main-bottom h2 {
+  grid-area: 1 / 2 / 2 / 3;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.main-bottom p:nth-of-type(1) {
+  grid-area: 2 / 2 / 3 / 3;
+  font-size: 0.9rem;
+  color: rgb(238, 103, 164);
+  margin: 3px 0;
+}
+
+.main-bottom p {
+  grid-area: 3 / 1 / 4 / 3;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  margin-top: 25px;
+}
