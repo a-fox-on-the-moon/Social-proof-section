@@ -26,6 +26,9 @@ body {
 .mobile-background {
   display: none;
 }
+main {
+  min-height: 100vh;
+}
 
 .main-top {
   display: grid;
