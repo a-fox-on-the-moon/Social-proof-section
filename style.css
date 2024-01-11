@@ -26,6 +26,7 @@ body {
 .mobile-background {
   display: none;
 }
+
 main {
   min-height: 100vh;
 }
@@ -140,4 +141,111 @@ main {
   font-size: 0.9rem;
   line-height: 1rem;
   margin-top: 25px;
+}
+
+/* Media queries */
+
+.desktop-background {
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
+}
+
+.mobile-background {
+  @media screen and (max-width: 650px) {
+    position: fixed;
+    display: block;
+    z-index: -1;
+    height: 100vh;
+  }
+}
+
+.mobile-background img {
+  @media screen and (max-width: 650px) {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.main-top {
+  @media screen and (max-width: 650px) {
+    display: block;
+    padding: 70px 50px 30px;
+  }
+
+  @media screen and (max-width: 410px) {
+    padding: 70px 0 30px;
+  }
+}
+
+.top-left {
+  @media screen and (max-width: 650px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.top-left h1 {
+  @media screen and (max-width: 410px) {
+    font-size: 2.5rem;
+  }
+}
+
+.top-left p {
+  @media screen and (max-width: 410px) {
+    font-size: 1rem;
+  }
+}
+
+.top-right {
+  @media screen and (max-width: 895px) {
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 845px) {
+    justify-content: top;
+    align-items: center;
+  }
+}
+
+.reviews,
+.report-guru,
+.best-tech {
+  @media screen and (max-width: 845px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 410px) {
+    width: 75%;
+  }
+}
+
+.report-guru {
+  @media screen and (max-width: 845px) {
+    margin-left: 0;
+  }
+}
+
+.best-tech {
+  @media screen and (max-width: 845px) {
+    margin-left: 0;
+  }
+}
+
+.main-bottom {
+  @media screen and (max-width: 830px) {
+    display: block;
+    width: 80%;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 410px) {
+    width: 75%;
+    padding: 0;
+  }
 }
