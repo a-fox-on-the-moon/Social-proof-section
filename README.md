@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/social-proof-section-component-using-html-and-css-JlSnejvARn)
+- Live Site URL: (https://a-fox-on-the-moon.github.io/Social-proof-section/)
 
 ## My process
 
