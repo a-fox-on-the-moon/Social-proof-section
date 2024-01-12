@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
-
 * {
   box-sizing: border-box;
 }
@@ -34,6 +32,7 @@ main {
 .main-top {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
   padding: 70px 70px 30px;
 }
 
@@ -52,8 +51,12 @@ main {
 }
 
 .top-right {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 10px) 1fr repeat(2, 10px);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 16px;
+  height: 70%;
+  width: 80%;
 }
 
 .reviews,
@@ -68,21 +71,19 @@ main {
   font-size: 0.8rem;
   font-weight: 600;
   color: rgb(80, 31, 80);
-  width: 70%;
-  padding: 3px 0;
-  margin-bottom: 15px;
+  height: 65%;
 }
 
 .reviews {
-  margin-top: 30px;
+  grid-area: 1/1/2/4;
 }
 
 .report-guru {
-  margin-left: 30px;
+  grid-area: 2/2/3/5;
 }
 
 .best-tech {
-  margin-left: 60px;
+  grid-area: 3/3/4/6;
 }
 
 .stars {
@@ -97,50 +98,60 @@ main {
 }
 
 .main-bottom {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 10px) 1fr repeat(2, 10px);
+  grid-column-gap: 16px;
   padding: 0 70px;
+}
+
+.buyer-1 {
+  grid-area: 1/1/4/2;
+}
+.buyer-2 {
+  grid-area: 2/2/5/3;
+}
+.buyer-3 {
+  grid-area: 3/3/6/4;
 }
 
 .buyer-1,
 .buyer-2,
 .buyer-3 {
-  display: grid;
-  grid-template-columns: 25% 75%;
-  grid-template-rows: 10% 10% 70%;
   color: rgb(255, 255, 255);
   background: rgb(80, 31, 80);
   border-radius: 5px;
-  padding: 20px 20px 0;
+  padding: 20px 20px 10px;
   margin: 10px;
 }
 
-.main-bottom img {
-  grid-area: 1 / 1 / 3 / 2;
+.portrait {
+  display: flex;
+}
+
+.portrait img {
   align-self: center;
   border-radius: 100px;
   width: 35px;
   height: 35px;
+  margin-right: 15px;
 }
 
-.main-bottom h2 {
-  grid-area: 1 / 2 / 2 / 3;
-  font-size: 0.9rem;
+.portrait h2 {
+  font-size: 1rem;
   font-weight: 500;
   margin: 5px 0;
 }
 
-.main-bottom p:nth-of-type(1) {
-  grid-area: 2 / 2 / 3 / 3;
+.portrait span {
   font-size: 0.9rem;
   color: rgb(238, 103, 164);
   margin: 3px 0;
 }
-
 .main-bottom p {
-  grid-area: 3 / 1 / 4 / 3;
   font-size: 0.9rem;
   line-height: 1rem;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 /* Media queries */
@@ -168,33 +179,42 @@ main {
 }
 
 .main-top {
-  @media screen and (max-width: 650px) {
-    display: block;
-    padding: 70px 50px 30px;
+  @media screen and (max-width: 830px) {
+    display: flex;
+    flex-direction: column;
   }
 
+  @media screen and (max-width: 625px) {
+    padding: 70px 40px 30px;
+  }
   @media screen and (max-width: 410px) {
-    padding: 70px 0 30px;
+    padding: 70px 10px 30px;
   }
 }
 
 .top-left {
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 830px) {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
   }
 }
-
 .top-left h1 {
+  @media screen and (max-width: 830px) {
+    font-size: 3.2rem;
+    width: 80%;
+  }
   @media screen and (max-width: 410px) {
     font-size: 2.5rem;
   }
 }
 
 .top-left p {
+  @media screen and (max-width: 830px) {
+    margin: 25px auto;
+  }
   @media screen and (max-width: 410px) {
     font-size: 1rem;
   }
@@ -204,35 +224,32 @@ main {
   @media screen and (max-width: 895px) {
     justify-content: center;
   }
+  @media screen and (max-width: 830px) {
+    display: block;
+  }
 
-  @media screen and (max-width: 845px) {
-    justify-content: top;
-    align-items: center;
+  @media screen and (max-width: 525px) {
+    width: 100%;
   }
 }
 
 .reviews,
 .report-guru,
 .best-tech {
-  @media screen and (max-width: 845px) {
+  @media screen and (min-width: 830px) and (max-width: 880px) {
     display: flex;
     flex-direction: column;
+    height: 75%;
+    padding-top: 5px;
   }
 
-  @media screen and (max-width: 410px) {
-    width: 75%;
+  @media screen and (max-width: 830px) {
+    margin: 10px;
   }
-}
 
-.report-guru {
-  @media screen and (max-width: 845px) {
-    margin-left: 0;
-  }
-}
-
-.best-tech {
-  @media screen and (max-width: 845px) {
-    margin-left: 0;
+  @media screen and (max-width: 525px) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -244,8 +261,13 @@ main {
     margin: 0 auto;
   }
 
+  @media screen and (max-width: 625px) {
+    padding: 0 40px;
+    width: 100%;
+  }
+
   @media screen and (max-width: 410px) {
-    width: 75%;
-    padding: 0;
+    width: 100%;
+    padding: 0 10px;
   }
 }
