@@ -22,20 +22,24 @@
   </head>
   <body>
     <main>
-      <div class="desktop-background">
-        <div class="desktop-background-top">
-          <img src="./images/bg-pattern-top-desktop.svg" alt="" />
+      <div class="background">
+        <div class="background-top">
+          <picture>
+            <source
+              media="(min-width: 650px)"
+              srcset="./images/bg-pattern-top-desktop.svg"
+            />
+            <img src="./images/bg-pattern-top-mobile.svg" alt="" />
+          </picture>
         </div>
-        <div class="desktop-background-bottom">
-          <img src="./images/bg-pattern-bottom-desktop.svg" alt="" />
-        </div>
-      </div>
-      <div class="mobile-background">
-        <div class="mobile-background-top">
-          <img src="./images/bg-pattern-top-mobile.svg" alt="" />
-        </div>
-        <div class="mobile-background-bottom">
-          <img src="./images/bg-pattern-bottom-mobile.svg" alt="" />
+        <div class="background-bottom">
+          <picture>
+            <source
+              media="(min-width: 650px)"
+              srcset="./images/bg-pattern-bottom-desktop.svg"
+            />
+            <img src="./images/bg-pattern-bottom-mobile.svg" alt="" />
+          </picture>
         </div>
       </div>
       <div class="main-top">
